@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name1" translatable="false">pressmatic</string>
+    <string name="app_name" translatable="false">Pressmatic</string>
+    <string name="x" translatable="false">X</string>
+    <string name="how_works">How works</string>
+    <string name="how_works1">It is an electronic device that helps you pick up objects or cut things.Controlling it from your mobile.
+        It has four head tools: snippers large and small,scissors and nailclippers.</string>
+    <string name="connect">Connect</string>
+    <string name="connect1">Connect to Pressmatic via bluetooth to continue.</string>
+    <string name="snippers">Snippers</string>
+    <string name="snippers1">Press and hold the open or close button.
+    You can adjust the speed to low, medium or high.</string>
+    <string name="scissors">Scissors</string>
+    <string name="scissors1">Turn ON to cut and OFF to stop.You can adjust the speed to low, medium or high.</string>
+    <string name="nailclippers">Nail clippers</string>
+    <string name="nailclippers1">Placed the nail clipper in the desired position and press CUT to make a complete cut.</string>
+    <string name="help">Language and Help</string>
+    <string name="help1">You can change the display language and consult the help on the top buttons.</string>
+    <string name="title_activity_main2" translatable="false">Main2Activity</string>
+    <string name="title_connect">¡Hello!</string>
+    <string name="text_connect">Connect to <b>pressmatic</b> via bluetooth for continue.</string>
+    <string name="connect_button">CONNECT</string>
+    <string name="select_button">SELECT</string>
+    <string name="no" translatable="false">NO</string>
+    <string name="si">YES</string>
+    <string name="activar_bluetooth">You need to activate the bluetooth of your phone to connect to
+    <b>pressmatic</b>,\n ¿Do you want to activate it now?</string>
+    <string name="spanish">Spanish</string>
+    <string name="english">English</string>
+    <string name="language">Choose display language.</string>
+
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name1" translatable="false">Pressmatic</string>
+    <string name="app_name" translatable="false"><b>Pressmatic</b></string>
+    <string name="x" translatable="false">X</string>
+    <string name="how_works"><b>Cómo funciona</b></string>
+    <string name="how_works1">Es un dispositivo electrónico que te ayuda a coger objetos o cortar cosas \n
+    controlándolo desde tu móvil.Tiene 4 cabezales: pinzas grandes y pequeñas, tijeras y cortauñas.</string>
+    <string name="connect"><b>Conéctate</b></string>
+    <string name="connect1">Conéctate a Pressmatic por bluetooth para continuar.</string>
+    <string name="snippers"><b>Pinzas</b></string>
+    <string name="snippers1">Mantén pulsado el botón abrir o cerrar.Puedes ajustar la velocidad a baja, media o alta.</string>
+    <string name="scissors"><b>Tijeras</b></string>
+    <string name="scissors1">Activa el modo ON para cortar y OFF para parar. Puedes ajustar la velocidad a baja, media o alta.</string>
+    <string name="nailclippers"><b>Cortauñas</b></string>
+    <string name="nailclippers1">Coloca el cortauñas en la posición deseada y pulsa CORTAR para realizar un corte completo.</string>
+    <string name="help">Idioma y Ayuda</string>
+    <string name="help1">Puedes cambiar el idioma y consultar la ayuda desde los botones superiores.</string>
+    <string name="title_activity_main2" translatable="false">Main2Activity</string>
+    <string name="title_connect"><b>¡Hola!</b></string>
+    <string name="text_connect">Conéctate a <b>pressmatic</b> por bluetooth para continuar</string>
+    <string name="connect_button">CONECTAR</string>
+    <string name="select_button">SELECCIONAR</string>
+    <string name="no" translatable="false">NO</string>
+    <string name="si">SI</string>
+    <string name="activar_bluetooth">Necesitas activar el bluetooth de tu teléfono para conectarte a
+    <b>pressmatic</b>, ¿Quieres activarlo ahora?</string>
+    <string name="spanish">Español</string>
+    <string name="english">Inglés</string>
+    <string name="language">Elije idioma para mostrar.</string>
+    <string name="speak">Hablar</string>
+
+    <string name="LabelMainActivity">Pantalla principal activa</string>
+    <string name="LabelModoPasoPaso">Modo agarre activo</string>
+    <string name="LabelModoContinuo">Modo de corte activo</string>
+    <string name="LabelModoAgarreInst">Modo cortauñas activo</string>
+    <string name="LabelPreferencias">Preferencias</string>
+    <string name="LabelAcercaDe">Acerca de la aplicacion</string>
+    <string name="LabelListaDispositivos">Lista de dispositivos</string>
+
+
+    <string name="DescripccionTijeras">Tijeras</string>
+    <string name="DescripccionAgarre">Pinzas grandes</string>
+    <string name="DescripccionPinzas">Pinzas pequeñas</string>
+    <string name="DescripccionCortauñas">Cortauñas</string>
+    <string name="DescripccionBluetooth">Boton de bluetooth</string>
+    <string name="DescripccionAcercaDe">Boton de bluetooth</string>
+    <string name="DescripccionHerramientas">Boton de bluetooth</string>
+
+
+    <string name="Welcome">Bienvenido a la aplicación</string>
+    <string name="Toolchoose">Conéctese al dispositivo y seleccione la herramienta a utilizar:</string>
+
+    <string name="AgarreInicio">Seleccione el modo óptimo para agarrar su objeto: </string>
+    <string name="CorteInicio">Seleccione el modo óptimo para cortar:  </string>
+    <string name="InicioBluetooth">En primer lugar, asegúrese de habilitar la función bluetooth.Pulse el siguiente botón: </string>
+    <string name="BotonBluetooth"> Activar BLUETOOTH </string>
+    <string name="Open"> Abrir </string>
+    <string name="Openning"> Abriendo </string>
+    <string name="Close"> Cerrar </string>
+    <string name="Closing"> Cerrando </string>
+
+
+    <string name="VelocidadL"> LENTA</string>
+    <string name="VelocidadM"> MEDIA</string>
+    <string name="VelocidadR"> RAPIDA</string>
+
+
+    <string name="ModoContinuo"> Modo de corte continuo</string>
+    <string name="ModoPasoPaso"> Modo paso a paso</string>
+    <string name="ModoManual"> Modo manual</string>
+    <string name="ModoAgarreInst"> Modo de agarre instantaneo</string>
+
+
+    <string name="InstruccionModoContinuo"> Seleccione la velocidad y pulse el botón START/STOP </string>
+    <string name="BotonContinuo"> START / STOP </string>
+    <string name="TextoContinuo"> Pulse de nuevo el botón para finalizar la ejecución </string>
+
+    <string name="InstruccionModoGrip"> Seleccione la velocidad </string>
+    <string name="BotonAbrir"> ABRIR  </string>
+    <string name="BotonCerrar"> CERRAR </string>
+    <string name="TextoGrip"> Pulse el botón correspondiente según desee abrir o cerrar la pinza </string>
+
+    <string name="InstruccionModoCortaUñas"> Presione el botón para realizar un ciclo de corte </string>
+    <string name="InstruccionModoPasoPaso"> Seleccione el número de ciclos a efectuar y pulse INICIO </string>
+
+
+    <string name="toast_connected_to">Conectado </string>
+    <string name="toast_unable_to_connect">No se ha podido conectar</string>
+    <string name="toast_connection_lost">Se ha perdido la conexión</string>
+    <string name="toast_connect_first">Conéctese al dispositivo primero</string>
+    <string name="toast_first_activity">Primera pantalla</string>
+    <string name="toast_last_activity">Última pantalla</string>
+
+
+    <string name="alert_dialog_no_bt">El bluetooth debe estar activado para poder usar esta aplicación.</string>
+    <string name="alert_dialog_yes">Si</string>
+    <string name="alert_dialog_no">No</string>
+    <string name="alert_dialog_warning_title">Atención</string>
+    <string name="alert_dialog_ok">Aceptar</string>
+    <string name="alert_dialog_turn_on_bt">Esta aplicación necesita bluetooth. ¿Desea activarlo?</string>
+
+    <!-- Titulo segun estado -->
+    <string name="not_connected">No está conectado al dispositivo</string>
+    <string name="title_connecting">Conectando...</string>
+    <string name="title_connected_to">Conectado: </string>
+    <string name="title_not_connected">No conectado</string>
+
+    <!-- Opciones del menu -->
+    <string name="connect2">Conectarse a un dispositivo</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="preferences">Preferencias</string>
+    <string name="menu_about">Acerca de</string>
+
+    <!-- Preferencias -->
+    <string name="size_selection">Tamaño de fuente</string>
+    <string name="size_selection_descrip">Se escoge el tamaño de letra</string>
+    <string name="style_selection">Estilo de la fuente</string>
+    <string name="style_selection_descrip">Se escoge el tipo de letra</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">Buscando dispositivos...</string>
+    <string name="select_device">Seleccione dispositivo</string>
+    <string name="none_paired">No hay dispositivos vinculados</string>
+    <string name="none_found">No se han encontrado dispositivos</string>
+    <string name="title_paired_devices">Dispositivos vinculados</string>
+    <string name="title_other_devices">Otros dispositivos disponibles</string>
+    <string name="button_scan">Buscar más dispositivos</string>
+    <string name="on" translatable="false">on</string>
+    <string name="off" translatable="false">off</string>
+    <string name="cortar">cortar</string>
+
+    <!--  Voice Commands -->
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
+    <string name="stop">Parar</string>
+    <string name="On">Encender</string>
+    <string name="Off">Apagar</string>
+    <string name="right">Derecha</string>
+    <string name="left">Izquierda</string>
+    <string name="cut">Cortar</string>
+    <string name="start">Inicio</string>
+    <string name="end">Fin</string>
+    <string name="slow">Baja</string>
+    <string name="medium">Media</string>
+    <string name="high">Alta</string>
+    <string name="commands">Comandos</string>
+    <string name="exit">Salir</string>
+
+    <!--  Voice Commands Descriptions-->
+    <string name="close_description">Cerrar herramienta</string>
+    <string name="open_description">Abrir herramienta</string>
+    <string name="exit_description">Salir de la aplicación</string>
+    <string name="cut_description">Acción cortar</string>
+    <string name="on_description">Activa la herramienta</string>
+    <string name="off_description">Detiene la herramienta</string>
+    <string name="slow_description">Velocidad baja</string>
+    <string name="medium_description">Velocidad media</string>
+    <string name="high_description">Velocidad alta</string>
+
+    <string name="connect_description">Conectar con Pressmatic</string>
+    <string name="Help">Ayuda</string>
+    <string name="Help_description">Instrucciones</string>
+    <string name="Language">Idioma</string>
+    <string name="Language_description">Cambiar idioma</string>
+    <string name="select_description">Accionar botón</string>
+    <string name="select">Seleccionar</string>
+    <string name="left_description">Ir izquierda</string>
+    <string name="right_description">Ir derecha</string>
+    <string name="exit_app">Desea salir de la aplicación?</string>
+
+</resources>

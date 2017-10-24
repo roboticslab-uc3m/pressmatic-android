@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">Pressmatic</string>
+    <string name="activar_bluetooth">You need to activate the bluetooth of your phone to connect to <b>pressmatic</b>, Do you want to activate it now?</string>
+    <string name="connect">Connect</string>
+    <string name="connect1">Connect to Pressmatic via bluetooth to continue.</string>
+    <string name="connect_button">CONNECT</string>
+    <string name="english">English</string>
+    <string name="help">Language and Help</string>
+    <string name="help1">You can change the display language and consult the help on the top buttons.</string>
+    <string name="how_works">How works</string>
+    <string name="how_works1">It is an electronic device that helps you pick up objects or cut things.Controlling it from your mobile.         It has four head tools: snippers large and small,scissors and nailclippers.</string>
+    <string name="language">Choose display language.</string>
+    <string name="nailclippers">Nail clippers</string>
+    <string name="nailclippers1">Placed the nail clipper in the desired position and press CUT to make a complete cut.</string>
+    <string name="scissors">Scissors</string>
+    <string name="scissors1">Turn ON to cut and OFF to stop. You can adjust the speed to low, medium or high.</string>
+    <string name="select_button">SELECT</string>
+    <string name="si">YES</string>
+    <string name="snippers">Snippers</string>
+    <string name="snippers1">Press and hold the open or close button. You can adjust the speed to low, medium or high.</string>
+    <string name="spanish">Spanish</string>
+    <string name="text_connect">Connect to <b>pressmatic</b> via bluetooth for continue.</string>
+    <string name="title_connect">¡Hello!</string>
+    <string name="speak">Speak</string>
+
+
+    <string name="LabelMainActivity">Main Screen Active</string>
+    <string name="LabelModoPasoPaso">Grip mode Active</string>
+    <string name="LabelModoContinuo">Cut mode Active</string>
+    <string name="LabelModoAgarreInst">Nail clipper mode Active</string>
+    <string name="LabelPreferencias">Preferences</string>
+    <string name="LabelAcercaDe">About the App</string>
+    <string name="LabelListaDispositivos">Device List</string>
+
+
+
+    <string name="DescripccionTijeras">Scissors</string>
+    <string name="DescripccionAgarre">Big Pliers</string>
+    <string name="DescripccionPinzas">Tweezers</string>
+    <string name="DescripccionCortauñas">Nail Clipper</string>
+    <string name="DescripccionBluetooth">Bluetooth Button</string>
+    <string name="DescripccionAcercaDe">Bluetooth Button</string>
+    <string name="DescripccionHerramientas">Bluetooth Button</string>
+
+
+    <string name="Welcome">Welcome to the App</string>
+    <string name="Toolchoose">Connect to the device and choose the tool to use:</string>
+
+    <string name="AgarreInicio">Choose the optimal mode to grip your object: </string>
+    <string name="CorteInicio">Choose the optimal mode to cut:  </string>
+    <string name="InicioBluetooth">Select the device to connect.Press the next button: </string>
+    <string name="BotonBluetooth"> Activate BLUETOOTH </string>
+    <string name="Open"> Open </string>
+    <string name="Openning"> Openning </string>
+    <string name="Close"> Close </string>
+    <string name="Closing"> Closing </string>
+
+    <string name="VelocidadL"> Slow</string>
+    <string name="VelocidadM"> Medium</string>
+    <string name="VelocidadR"> Fast</string>
+
+
+    <string name="ModoContinuo"> Continuous Cut Mode</string>
+    <string name="ModoPasoPaso"> Stepper Mode</string>
+    <string name="ModoManual"> Manual Modo</string>
+    <string name="ModoAgarreInst"> Instantaneous grip mode</string>
+
+
+    <string name="InstruccionModoContinuo"> Select the speed and press START/STOP </string>
+    <string name="BotonContinuo"> START / STOP </string>
+    <string name="TextoContinuo"> Pulse the button again to end the execution </string>
+
+    <string name="InstruccionModoGrip"> Select the speed </string>
+    <string name="BotonAbrir"> OPEN  </string>
+    <string name="BotonCerrar"> CLOSE </string>
+    <string name="TextoGrip"> Press the appropriate button wether you choose to open or close the Pliers </string>
+
+    <string name="InstruccionModoCortaUñas"> Press the button to perform one cut cycle </string>
+    <string name="InstruccionModoPasoPaso"> Select the amount of cycles to perform and press INICIO </string>
+
+    <string name="AcercaDePressmatic"> About Pressmatic</string>
+    <string name="TextoAcercaDe"> PRESSMATIC is a free application developed by the University Carlos III de Madrid with the objective of allowing the easy usage of the PRESSMATIC device to people who find certain actions, such as cutting or gripping objects, difficult or even impossible. The main objective and desire of the developement of this application is the creation of an application acessible for everyone.\n \nUsage instructions: \nIn order to correctly use the device, the user must bind, via bluetooth connection, the mobile device to the PRESSMATIC device and afterwads stablish the connection pressing the button with the bluetooth icon on it. Once done, it will be possible to access the operation modes and control the PRESSMATIC device easily through the adjustment of the operation parameters.\n\n Description of the modes of operation related to the icons:\n->Scissors: This mode allows to perform cut operations continuously by pressing the START/STOP button. It is possible to adjust the velocity through the usage of the speed buttons.\n->Big Pliers: This mode allows to perfom the gripping of objects using the OPEN and CLOSE buttons.It is also possible to adjust the velocity through the usage of the speed buttons.\n->Tweezers:This mode allows to perform the gripping of objects using the OPEN and CLOSE buttons.It is also possible to adjust the velocity through the usage of the speed buttons.\n->Nail Clipper: This mode allows to perform a single cut with one press of the button, producing a temporized cycle.\n
+    </string>
+
+
+    <string name="toast_connected_to">Connected </string>
+    <string name="toast_unable_to_connect">Unable to connect</string>
+    <string name="toast_connection_lost">Connection Lost</string>
+    <string name="toast_connect_first">Connecto to the device first</string>
+    <string name="toast_first_activity">First activity</string>
+    <string name="toast_last_activity">Last activity</string>
+
+
+    <string name="alert_dialog_no_bt">Bluetooth must be activated in order to use this application.</string>
+    <string name="alert_dialog_yes">Yes</string>
+    <string name="alert_dialog_no">No</string>
+    <string name="alert_dialog_warning_title">Attention</string>
+    <string name="alert_dialog_ok">Accept</string>
+    <string name="alert_dialog_turn_on_bt">This application requires Bluetooth. Would you like to activate it?</string>
+
+    <!-- Titulo segun estado -->
+    <string name="not_connected">Not connected to the device</string>
+    <string name="title_connecting">Connecting...</string>
+    <string name="title_connected_to">Connected: </string>
+    <string name="title_not_connected">Not connected</string>
+
+
+    <!-- Opciones del menu -->
+    <string name="connect2">Connect to a device</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="preferences">Preferences</string>
+    <string name="menu_about">About</string>
+
+
+    <!-- Preferencias -->
+    <string name="color_selection">Color selection</string>
+    <string name="color_selection_descrip">The colors of the background and the buttons are stablished</string>
+    <string name="size_selection">Font size</string>
+    <string name="size_selection_descrip">The letter size is stablished</string>
+    <string name="style_selection">Font style</string>
+    <string name="style_selection_descrip">The letter style is stablished</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">Scanning...</string>
+    <string name="select_device">Select a device</string>
+    <string name="none_paired">No devices binded</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Bound devices</string>
+    <string name="title_other_devices">Other available devices</string>
+    <string name="button_scan">Search other devices</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="cortar">cut</string>
+
+    <!--  Voice Commands -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="stop">Stop</string>
+    <string name="On">On</string>
+    <string name="Off">Off</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="cut">Cut</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="select">Select</string>
+    <string name="slow">Slow</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+    <string name="commands">Commands</string>
+    <string name="exit">Exit</string>
+
+    <!--  Voice Commands Descriptions-->
+    <string name="close_description">Close tool</string>
+    <string name="open_description">Open tool</string>
+    <string name="exit_description">Exit application</string>
+    <string name="cut_description">Cut task</string>
+    <string name="on_description">Active tool</string>
+    <string name="off_description">Stop tool</string>
+    <string name="slow_description">Slow velocity</string>
+    <string name="medium_description">Medium velocity</string>
+    <string name="high_description">High velocity</string>
+
+    <string name="connect_description">Connect to Pressmatic</string>
+    <string name="Help">Help</string>
+    <string name="Help_description">Instructions</string>
+    <string name="Language">Language</string>
+    <string name="Language_description">Change language</string>
+    <string name="select_description">Press button</string>
+    <string name="left_description">Go left</string>
+    <string name="right_description">Go right</string>
+    <string name="exit_app">Do you want to exit the application?</string>
+
+</resources>

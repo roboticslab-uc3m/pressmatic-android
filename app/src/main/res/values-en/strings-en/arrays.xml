@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tiposInterfaz">
+        <item>Green background and red buttons</item>
+        <item>Blue background and red buttons</item>
+        <item>Grey background and blue buttons</item>
+        <item>Orange background and blue buttons</item>
+
+    </string-array>
+    <string-array name="tiposInterfazValores">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+
+    <string-array name="tamañoLetra">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <string-array name="tamañoLetraValores">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="fuenteLetra">
+        <item>Default</item>
+        <item>Serif</item>
+        <item>Sans</item>
+    </string-array>
+    <string-array name="fuenteLetraValores">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+
+    <string-array name="idioma">
+        <item>Spanish</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="idiomaValor">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>

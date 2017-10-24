@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_how_works1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4fbff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_height="50dp"
+                app:srcCompat="@android:drawable/btn_plus"
+                android:id="@+id/imageButton4"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:layout_width="40dp" />
+
+            <TextView
+                android:text="@string/how_works"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                tools:text="@string/how_works"
+                android:textSize="24sp"
+                android:textColor="@android:color/background_dark"
+                android:layout_weight="101.29"
+                android:textAlignment="center" />
+
+            <Button
+                android:text="@string/x"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:fontFamily="monospace"
+                android:layout_weight="10.13"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@android:color/background_dark"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:paddingLeft="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_media_play"
+                    android:id="@+id/imageButton"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:tint="@android:color/holo_orange_dark"
+                    android:rotation="180"
+                    android:paddingTop="100dp"
+                    android:paddingBottom="140dp"
+                    android:translationY="-40dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/tools1"
+                    android:id="@+id/imageView"
+                    android:contentDescription="@string/how_works"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_media_play"
+                    android:id="@+id/imageButton1"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:tint="@android:color/holo_orange_dark"
+                    android:paddingBottom="140dp"
+                    android:paddingTop="100dp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="@string/app_name"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                tools:text="@string/app_name"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/background_dark"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:text="@string/how_works1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                tools:text="@string/how_works1"
+                android:textColor="@android:color/background_dark"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                app:srcCompat="@android:drawable/ic_btn_speak_now"
+                android:id="@+id/speak"
+                android:background="@android:color/transparent"
+                android:contentDescription="speak"
+                android:layout_marginTop="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/radiobutton_off_background"
+                        android:id="@+id/imageView6"
+                        android:tint="@color/colorPrimaryDark"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/radiobutton_off_background"
+                        android:id="@+id/imageView7"
+                        android:adjustViewBounds="false"
+                        android:layout_marginLeft="5dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/radiobutton_off_background"
+                        android:id="@+id/imageView8"
+                        android:adjustViewBounds="false"
+                        android:layout_marginLeft="5dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/radiobutton_off_background"
+                        android:id="@+id/imageView9"
+                        android:adjustViewBounds="false"
+                        android:layout_marginLeft="5dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/radiobutton_off_background"
+                        android:id="@+id/imageView10"
+                        android:adjustViewBounds="false"
+                        android:layout_marginLeft="5dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/radiobutton_off_background"
+                        android:id="@+id/imageView11"
+                        android:adjustViewBounds="false"
+                        android:layout_marginLeft="5dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

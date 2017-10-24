@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4fbff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_connect">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="38dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_settings_black_24dp"
+                    android:id="@+id/imageButton3"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="gear button" />
+
+                <Button
+                    android:text="@string/x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/background_dark"
+                    android:background="@android:color/transparent"
+                    android:elevation="0dp"
+                    android:layout_marginLeft="120dp" />
+                <Button
+                    android:textColor="#fff"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Button5"
+                    android:background="@android:drawable/ic_menu_help"
+                    android:layout_marginLeft="140dp" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_help"
+                    android:id="@+id/imageButton2"
+                    android:background="@android:color/transparent"
+                    android:tint="@android:color/black"
+                    android:scaleType="fitEnd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="@string/title_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/background_dark"
+                    android:layout_marginTop="50dp"
+                    android:textSize="30sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:text="@string/text_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="30sp"
+                    android:lineSpacingExtra="10sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.21"
+                    android:textAlignment="center" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_btn_speak_now"
+                    android:id="@+id/speak"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="speak"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.59" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="0.38">
+
+                    <Button
+                        android:text="@string/connect_button"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button5"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="230dp"
+                        android:textSize="20sp"
+                        tools:text="@string/connect_button" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/activity_enable"
+        android:background="#f4fbff"
+        android:weightSum="1"
+        android:gravity="center"
+        android:layout_centerInParent="false"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible">
+
+        <TextView
+            android:text="@string/activar_bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_weight="0.24"
+            android:textAlignment="center" />
+
+        <FrameLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="238dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="61dp">
+
+            <Button
+                android:text="@string/no"
+                android:id="@+id/button2"
+                android:background="@android:color/background_light"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="normal|bold"
+                android:backgroundTintMode="screen"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="233dp"
+                android:layout_height="57dp" />
+        </FrameLayout>
+
+        <Button
+            android:text="@string/si"
+            android:layout_width="233dp"
+            android:layout_height="57dp"
+
+            android:id="@+id/button3"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="0.12" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_btn_speak_now"
+            android:id="@+id/speak1"
+            android:background="@android:color/transparent"
+            android:contentDescription="speak"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.17" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/commands"
+            android:gravity="right"
+            android:background="#f4fbff"
+            android:visibility="invisible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:elevation="1dp"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:text="@string/commands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:text="@string/connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    android:text="@string/connect_description"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <TextView
+                    android:text="@string/Help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView12"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:text="@string/Help_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:text="@string/exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView13"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:text="@string/exit_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView14"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <TextView
+                    android:text="@string/Language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView15"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:text="@string/Language_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView16"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>
