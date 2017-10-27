@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.javier.pressmatic", appContext.getPackageName());
+        assertEquals("es.uc3m.roboticslab.pressmatic", appContext.getPackageName());
     }
 }

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.javier.pressmatic"
+        applicationId "es.uc3m.roboticslab.pressmatic"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

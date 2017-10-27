@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 /**
  * Created by Jorge on 20/04/2017.

@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 /**
  * Created by javier on 17/12/16.
@@ -12,7 +12,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.*;
 import android.util.Log;
-import android.widget.Toast;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 import java.io.IOException;
 import java.io.InputStream;

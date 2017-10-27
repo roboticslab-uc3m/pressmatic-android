@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -21,6 +21,8 @@ import java.util.Locale;
 import java.util.ArrayList;
 import java.util.List;
 import android.view.View.OnClickListener;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 
 public class Language extends AppCompatActivity implements OnClickListener{

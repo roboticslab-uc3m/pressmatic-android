@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,7 +13,6 @@ import android.speech.RecognizerIntent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import android.view.View.OnClickListener;
 import android.widget.ToggleButton;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 /**
  * Created by javier on 17/12/16.

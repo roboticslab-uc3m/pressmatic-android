@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.*;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 import java.util.Set;
 

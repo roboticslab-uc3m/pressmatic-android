@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,22 +10,19 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.speech.RecognizerIntent;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import android.view.View.OnClickListener;
-import android.view.MotionEvent;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 /**
  * Created by javier on 17/12/16.

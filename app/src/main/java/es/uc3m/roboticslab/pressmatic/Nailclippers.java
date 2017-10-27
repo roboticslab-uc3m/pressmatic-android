@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -24,6 +24,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 import android.view.View.OnClickListener;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 public class Nailclippers extends AppCompatActivity implements OnClickListener{
 

@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 /**
  * Created by javier on 17/12/16.
@@ -14,7 +14,6 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.speech.RecognizerIntent;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.*;
 import android.widget.*;
@@ -24,6 +23,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.view.View.OnClickListener;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 import java.util.ArrayList;
 import java.util.List;

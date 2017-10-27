@@ -1,10 +1,11 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 public class MainActivity extends AppCompatActivity {
 

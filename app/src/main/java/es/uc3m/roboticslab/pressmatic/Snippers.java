@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -24,17 +24,19 @@ import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
-public class Scissors extends AppCompatActivity implements OnClickListener{
+import es.uc3m.roboticslab.pressmatic.R;
+
+public class Snippers extends AppCompatActivity implements OnClickListener{
 
     private ImageButton settings,help,left,right,speakButton;
     private Button select,help_button;
-    static final String corte = "b";
-    private String pressm="a",menu="f";
     public static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
     protected static BluetoothAdapter mBluetoothAdapter = null;
     private static BluetoothConexion mBluetoothConexion;
-    private boolean mBound = false;
+    // Message types sent from the BluetoothReadService Handler
     public static final int MESSAGE_STATE_CHANGE = 1;
+    private String agarre = "c";
+    private String pressm="a",menu="f";
     private TableLayout commands;
     private boolean table=true;
     private MyApplication mApplication;
@@ -44,7 +46,8 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scissors);
+        setContentView(R.layout.activity_snippers);
+
         settings= (ImageButton) findViewById(R.id.imageButton3);
         help=(ImageButton) findViewById(R.id.imageButton2);
         select= (Button) findViewById(R.id.button5);
@@ -72,6 +75,7 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
             Toast.makeText(getApplicationContext(), "Recognizer not present", Toast.LENGTH_LONG).show();
         }
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -95,7 +99,7 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
 
                         case BluetoothConexion.STATE_NONE:
                             mApplication.setConnection(false);
-                            startActivity(new Intent(Scissors.this, Pressmatic.class));
+                            startActivity(new Intent(Snippers.this, Pressmatic.class));
                             break;
                     }}
         }
@@ -108,7 +112,6 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
             mBluetoothConexion = binder.getService();
             mApplication.setConnection(true);
         }
-
         @Override
         public void onServiceDisconnected(ComponentName name) {
             mApplication.setConnection(false);
@@ -123,7 +126,6 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
         startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -132,48 +134,52 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
 
     private void actualizaInterfaz() {
 
-        if((mBluetoothAdapter == null)||(!mBluetoothAdapter.isEnabled())) {
-            startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+        if ((mBluetoothAdapter == null) || (!mBluetoothAdapter.isEnabled())){
+            startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
             finish();
-        }
-        if(!mApplication.getConnection()) {
-            startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+    }
+        if (!mApplication.getConnection()){
+            startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
             finish();
-        }
+    }
         left.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if ((mBluetoothAdapter == null) || (!mBluetoothAdapter.isEnabled())){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
 
-                if (!mApplication.getConnection()){
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+            }if (!mApplication.getConnection()){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-            }else {
-                    startActivity(new Intent(Scissors.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                    finish();
-                }
+            }else
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.toast_first_activity), Toast.LENGTH_SHORT).show();
             }});
 
         right.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if ((mBluetoothAdapter == null) || (!mBluetoothAdapter.isEnabled())){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
 
-                if (!mApplication.getConnection()){
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+            }if (!mApplication.getConnection()){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
             }else {
-                startActivity(new Intent(Scissors.this, Nailclippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                finish();
-            }
+                    startActivity(new Intent(Snippers.this, Scissors.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
+                }
             }});
 
         settings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                startActivity(new Intent(Scissors.this, Language.class));
+                startActivity(new Intent(Snippers.this, Language.class));
             }});
 
         help.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mBluetoothConexion.send(menu);
-                startActivity(new Intent(Scissors.this, HowWorks1.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                startActivity(new Intent(Snippers.this, HowWorks1.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                 finish();
             }});
 
@@ -192,35 +198,44 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
             public void onClick(View v) {
 
                 if (!mApplication.getConnection()){
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                finish();
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
             }else{
-                mBluetoothConexion.send(corte);
-                startActivity(new Intent(Scissors.this, ModoContinuo.class));}
+                mBluetoothConexion.send(agarre);
+                startActivity(new Intent(Snippers.this, ModoPasoPaso.class));
+            }
 
-                if((mBluetoothAdapter == null)||(!mBluetoothAdapter.isEnabled()))
-                    startActivity(new Intent(Scissors.this, Pressmatic.class));
+                if((mBluetoothAdapter == null)||(!mBluetoothAdapter.isEnabled())) {
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
+                }
             }});
 
-        scrollView.setOnTouchListener(new OnSwipeTouchListener(Scissors.this) {
+        scrollView.setOnTouchListener(new OnSwipeTouchListener(Snippers.this) {
             @Override
             public void onSwipeLeft() {
-                if (!mApplication.getConnection()) {
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                if((mBluetoothAdapter == null)||(!mBluetoothAdapter.isEnabled())) {
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
+
+                }if(!mApplication.getConnection()) {
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
                 }else{
-                    startActivity(new Intent(Scissors.this, Nailclippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    startActivity(new Intent(Snippers.this, Scissors.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
             }}
             @Override
             public void onSwipeRight() {
-                if (!mApplication.getConnection()) {
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                if ((mBluetoothAdapter == null) || (!mBluetoothAdapter.isEnabled())){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-                }else{
-                    startActivity(new Intent(Scissors.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                finish();
-            }}
+            }if(!mApplication.getConnection()) {
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();
+                }else
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.toast_first_activity), Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
@@ -231,58 +246,54 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
         if (requestCode == VOICE_RECOGNITION_REQUEST_CODE && resultCode == RESULT_OK) {
             // Fill the list view with the strings the recognizer thought it could have heard
             ArrayList matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
             Toast.makeText(getApplicationContext(),matches.toString(), Toast.LENGTH_LONG).show();
 
             // matches is the result of voice input. It is a list of what the user possibly said
             if (matches.contains("left")||matches.contains("izquierda")||matches.contains("izquierdo")) {
-                if (!mApplication.getConnection()) {
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+
+                if (!mApplication.getConnection()){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-                } else {
-                    startActivity(new Intent(Scissors.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                    finish();
-                }
+            }else
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.toast_first_activity), Toast.LENGTH_SHORT).show();
             }
+
             if (matches.contains("right")||matches.contains("derecha")||matches.contains("derecho")) {
                 if (!mApplication.getConnection()){
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                finish();
-            }else{
-                    startActivity(new Intent(Scissors.this, Nailclippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-            }}
+            }else{
+                    startActivity(new Intent(Snippers.this, Scissors.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    finish();}
 
             if (matches.contains("settings")||matches.contains("languaje")||matches.contains("ajustes")||matches.contains("idioma"))
-                startActivity(new Intent(Scissors.this, Language.class));
+                startActivity(new Intent(Snippers.this, Language.class));
 
             if (matches.contains("help")||matches.contains("ayuda")||matches.contains("instructions")||matches.contains("instrucciones")) {
-                startActivity(new Intent(Scissors.this, HowWorks1.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                startActivity(new Intent(Snippers.this, HowWorks1.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                 finish();
                 mBluetoothConexion.send(menu);
             }
-
-                if (matches.contains("exit") || matches.contains("salir")|| matches.contains("close")|| matches.contains("cerrar")
+            if (matches.contains("exit") || matches.contains("salir")|| matches.contains("close")|| matches.contains("cerrar")
                     || matches.contains("desconectar")) {
-                    exit();
+                exit();
             }
-
             if (matches.contains("select")||matches.contains("seleccionar")) {
-
-                if (!mApplication.getConnection()) {
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                if (!mApplication.getConnection()){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-                }else{
-                    mBluetoothConexion.send(corte);
-                    startActivity(new Intent(Scissors.this, ModoContinuo.class));
-                }
+            }else {
+                startActivity(new Intent(Snippers.this, ModoPasoPaso.class));
+                    mBluetoothConexion.send(agarre);
 
-                if((mBluetoothAdapter == null)||(!mBluetoothAdapter.isEnabled())) {
-                    startActivity(new Intent(Scissors.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+            }if((mBluetoothAdapter == null)||(!mBluetoothAdapter.isEnabled())){
+                    startActivity(new Intent(Snippers.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-                }
-            }
+            }}
         }
-    }
+    }}
+
     public void exit() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.exit_app)
@@ -295,7 +306,7 @@ public class Scissors extends AppCompatActivity implements OnClickListener{
                         unbindService(mConnection);
                         mBluetoothConexion.stop();
 
-                        Intent intent = new Intent(Scissors.this, Scissors.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        Intent intent = new Intent(Snippers.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         finish();
                         flag = 1;
                         startActivity(intent);

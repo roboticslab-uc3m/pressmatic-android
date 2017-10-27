@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -17,12 +17,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 import android.view.View.OnClickListener;
+
+import es.uc3m.roboticslab.pressmatic.R;
 
 public class HowWorks4 extends AppCompatActivity implements OnClickListener {
 

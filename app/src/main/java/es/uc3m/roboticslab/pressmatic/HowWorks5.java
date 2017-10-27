@@ -1,4 +1,4 @@
-package com.javier.pressmatic;
+package es.uc3m.roboticslab.pressmatic;
 
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -17,7 +17,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 import android.view.View.OnClickListener;
 
-public class HowWorks6 extends AppCompatActivity implements OnClickListener{
+import es.uc3m.roboticslab.pressmatic.R;
+
+public class HowWorks5 extends AppCompatActivity implements OnClickListener{
 
     private ImageButton left,right,speakButton,zoom;
     private Button button_X;
@@ -43,7 +44,7 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_how_works6);
+        setContentView(R.layout.activity_how_works5);
 
         left= (ImageButton) findViewById(R.id.imageButton);
         right=(ImageButton) findViewById(R.id.imageButton1);
@@ -85,13 +86,15 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
         left.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                startActivity(new Intent(HowWorks6.this, HowWorks5.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                startActivity(new Intent(HowWorks5.this, HowWorks4.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                 finish();
             }});
 
         right.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.toast_last_activity), Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(HowWorks5.this, HowWorks6.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
             }});
 
         button_X.setOnClickListener(new View.OnClickListener() {
@@ -99,12 +102,12 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
                 mBluetoothConexion.send(pressm);
 
                 if (mApplication.getConnection()){
-                    startActivity(new Intent(HowWorks6.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                    startActivity(new Intent(HowWorks5.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
             }else {
-                    startActivity(new Intent(HowWorks6.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
-                    finish();
-                }
+                startActivity(new Intent(HowWorks5.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
+            }
             }});
 
         zoom.setOnClickListener(new View.OnClickListener() {
@@ -121,17 +124,22 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
             }
         });
 
-        scrollView.setOnTouchListener(new OnSwipeTouchListener(HowWorks6.this) {
+        scrollView.setOnTouchListener(new OnSwipeTouchListener(HowWorks5.this) {
             @Override
             public void onSwipeLeft() {
-                Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.toast_last_activity), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(HowWorks5.this, HowWorks6.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
             }
             @Override
             public void onSwipeRight() {
-                startActivity(new Intent(HowWorks6.this, HowWorks5.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                startActivity(new Intent(HowWorks5.this, HowWorks4.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                 finish();
             }
         });
+    }
+    //Devuelve el estado de la conexión con el dispositivo
+    public int getConnectionState() {
+        return mBluetoothConexion.getState();
     }
 
     // The Handler that gets information back from the BluetoothService
@@ -145,13 +153,12 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
                     switch (msg.arg1) {
 
                         case BluetoothConexion.STATE_CONNECTED:
-                        mApplication.setConnection(true);
+                            mApplication.setConnection(true);
                             break;
 
                         case BluetoothConexion.STATE_NONE:
                             mApplication.setConnection(false);
-                            break;
-                    }
+                            break;}
                     break;}
         }
     };
@@ -192,20 +199,23 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
 
             // matches is the result of voice input. It is a list of what the user possibly said
             if (matches.contains("left") || matches.contains("izquierda") || matches.contains("izquierdo")){
-                startActivity(new Intent(HowWorks6.this, HowWorks5.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                startActivity(new Intent(HowWorks5.this, HowWorks4.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                 finish();
         }
 
-            if (matches.contains("right")||matches.contains("derecha")||matches.contains("derecho"))
-                Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.toast_last_activity), Toast.LENGTH_SHORT).show();
+            if (matches.contains("right") || matches.contains("derecha") || matches.contains("derecho")){
+                startActivity(new Intent(HowWorks5.this, HowWorks6.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
+        }
 
             if (matches.contains("close")||matches.contains("cerrar")||matches.contains("salir")) {
                 mBluetoothConexion.send(pressm);
-                if (mApplication.getConnection()) {
-                    startActivity(new Intent(HowWorks6.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+
+                if (mApplication.getConnection()){
+                    startActivity(new Intent(HowWorks5.this, Snippers.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
-                }else{
-                    startActivity(new Intent(HowWorks6.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
+            }else{
+                    startActivity(new Intent(HowWorks5.this, Pressmatic.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP));
                     finish();
             }}
 
@@ -213,8 +223,10 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
                     || matches.contains("desconectar") || matches.contains("disconnectar")) {
                 unbindService(mConnection);
                 mBluetoothConexion.stop();
-                exit();}
-        }}
+                exit();
+}
+        }
+    }
     public void exit() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.exit_app)
@@ -226,7 +238,7 @@ public class HowWorks6 extends AppCompatActivity implements OnClickListener{
 
                         unbindService(mConnection);
                         mBluetoothConexion.stop();
-                        Intent intent = new Intent(HowWorks6.this, HowWorks6.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        Intent intent = new Intent(HowWorks5.this, HowWorks5.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         flag = 1;
                         finish();
                         startActivity(intent);
